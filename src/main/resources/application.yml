@@ -1,0 +1,44 @@
+server: 
+  port: 8080
+  servlet:
+    context-path: /Hiking
+      
+spring:
+  #資料源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hiking
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    # 顯示SQL語法
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    # create, create-drop, update, [none]
+    properties:
+      hibernate:
+      # format SQL語法
+        format_sql: true  
+  sql: 
+    init: 
+      platform: org.hibernate.dialect.MySQLDialect
+  thymeleaf:
+    #thymeleaf頁面的緩存開關，默認true開啟緩存，建議在開發階段關閉thymeleaf頁面緩存，目的實時看到頁面
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+## 顯示SQL語法的查詢條件的值
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE    
+ 
+        
