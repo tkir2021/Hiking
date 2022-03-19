@@ -9,32 +9,36 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.hiking.member.model.MemberRepository;
 import com.hiking.member.model.MemberVO;
+import com.hiking.member.service.MemberService;
+import com.hiking.member.service.impl.MemberServiceImpl;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootTest
-class HikingApplicationTests {
+public class HikingApplicationTests {
 
 	@Autowired
-	JdbcTemplate jdbcTemplatet;
+	private JdbcTemplate jdbcTemplatet;
+	
+	
 	@Autowired
-	MemberRepository memberRepository;
+	private MemberService memberService;
 	
 //	Logger Logger = LoggerFactory.getLogger(HikingApplicationTests.class);
 	
 	//測試資料庫連線
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 		Long aLong = jdbcTemplatet.queryForObject("select count(*) from member", Long.class);
 //		Logger.info("會員數：{}", aLong);
 		log.info("會員數：{}", aLong);
-		
 	}
 	
+	//測試Service
 	@Test
-	void getMember() {
-		log.info("會員資料：{}", memberRepository.findByMemberId(19).toString());
+	public void getMember() {
+		log.info("會員資料：{}", memberService.findOneByMemberId(19));
 		
 	}
 }
