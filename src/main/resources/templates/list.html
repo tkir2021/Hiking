@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" th:src="@{article.js}"></script>
+    <title>Article list</title>
+  </head>
+  <body>
+    <div th:each="articleVO : ${articleVOs}">
+      <div th:text="${articleVO.articleTitle}"></div>
+    </div>
+  </body>
+</html>
