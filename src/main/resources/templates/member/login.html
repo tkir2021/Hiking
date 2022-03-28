@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta name="generator"
+	content="HTML Tidy for HTML5 for Windows version 5.2.0" />
+<meta charset="utf-8" />
+<title>Index</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous" />
+<link rel="stylesheet" href="../css/login.css">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+	integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<form action="loginCheck" method="POST">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="form-group col-4">
+					<label for="InputAccount">Account</label>
+					<input type="email" class="form-control" id="memberEmail" name="email" aria-describedby="accountHelp" placeholder="Enter E-mail" /> 
+					<small id="accountHelp" class="form-text text-muted">請輸入註冊帳號的E-mail</small>	<br /> 
+					<label for="InputPassword">Password</label> 
+					<input type="password" class="form-control" id="memberPassword" name="password" placeholder="Password" /> <br />
+					<div class="row justify-content-around">
+						<button type="button" class="btn col-3 border-danger bg-danger text-white" onclick="clearData()">Clear</button>
+						<button type="submit" class="btn btn-primary col-3">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	
+	
+	<script type="text/javascript">
+	
+	function clearData() {
+		$("#memberEmail").val("");
+		$("#memberPassword").val("");
+	}
+	
+	
+	</script>
+</body>
+</html>

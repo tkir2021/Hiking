@@ -27,7 +27,9 @@ spring:
   thymeleaf:
     #thymeleaf頁面的緩存開關，默認true開啟緩存，建議在開發階段關閉thymeleaf頁面緩存，目的實時看到頁面
     cache: false
+    #thymeleaf模板前綴，默認可以不寫
     prefix: classpath:/templates/
+    #thymeleaf模板後綴，默認可以不寫
     suffix: .html
 
 ## 顯示SQL語法的查詢條件的值
