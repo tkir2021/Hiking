@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.hiking.member.model.MemberRepository;
-import com.hiking.member.model.MemberVO;
+import com.hiking.member.model.Member;
 import com.hiking.member.service.MemberService;
 import com.hiking.member.service.impl.MemberServiceImpl;
 
